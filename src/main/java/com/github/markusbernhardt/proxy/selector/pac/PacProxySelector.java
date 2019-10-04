@@ -26,7 +26,7 @@ public class PacProxySelector extends ProxySelector {
   private static final String PAC_SOCKS = "SOCKS";
   private static final String PAC_DIRECT = "DIRECT";
 
-  private PacScriptParser pacScriptParser;
+  private final PacScriptParser pacScriptParser;
 
   private static volatile boolean enabled = true;
 
@@ -81,6 +81,7 @@ public class PacProxySelector extends ProxySelector {
       }
     } catch (Exception e) {
       Logger.log(getClass(), LogLevel.ERROR, "PAC parser error.", e);
+      return null;
     }
   }
   

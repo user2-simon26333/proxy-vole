@@ -4,6 +4,10 @@
 .classpath
 bin/
 
+# IntelliJ IDEA
+.idea/
+*.iml
+
 # Maven
 target/
 
